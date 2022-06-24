@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Arrays</title>
+
+    <script>
+        function randomNumbers(){
+                // var numbers = (1 + Math.random()*9);
+                var randomNumbers = [] 
+                for(var i = 0 ; i < 10; i++){
+                    randomNumbers.push(Math.round(1+Math.random()*9));
+            }
+        return randomNumbers;
+    }
+    var randomValues=randomNumbers();
+    document.writeln("<p>Random Values: " + randomValues + "</p>")
+    function ascendingOrder(randomValues){
+        for(var i = 0 ; i < randomValues.length;i++){
+            for(var j = i + 1 ; j < randomValues.length; j++){
+                var temp = 0;
+                if(randomValues[i] < randomValues[j]){
+                    temp = randomValues[i];
+                    randomValues[i] = randomValues[j];
+                    randomValues[j] = temp;
+                }
+            }
+        }
+        document.writeln("<p>Ascending Order: " + randomValues + "</p>")
+    }
+    function descendingOrder(randomValues){
+        for(var i = 0 ; i < randomValues.length;i++){
+            for(var j = i + 1 ; j < randomValues.length; j++){
+                var temp = 0;
+                if(randomValues[i] > randomValues[j]){
+                    temp = randomValues[i];
+                    randomValues[i] = randomValues[j];
+                    randomValues[j] = temp;
+                }
+            }
+        }
+        document.writeln("<p>Descending Order: " + randomValues + "</p>")
+    }
+    ascendingOrder(randomValues);
+    descendingOrder(randomValues);
+    </script>
+    
+</head>
+<body>
+
+</body>
+</html>
