@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Average Program</title>
+    <script>
+        var total;
+        var GradeCounter;
+        var grade;
+        var gradeValue;
+        var average;
+
+        total = 0;
+        gradeCounter = 0;
+
+        while(gradeCounter < 10 ){
+            grade = window.prompt("Enter integer grade:","0");
+
+            gradeValue= parseInt(grade);
+
+            total = total + gradeValue;
+
+            gradeCounter = gradeCounter + 1 ;
+        }
+
+         //average = total / 10 ; // You can code it solid
+         average = total / gradeCounter; // but it's often better to code dynamically.
+
+         document.writeln("<h1>Class Average is " + average + "</h1>");
+
+    </script>
+</head>
+<body>
+    <!-- ©1992-2010 by Pearson Education, Inc. All
+Rights Reserved. This repository is for demonstration purposes  -->
+
+<footer>
+    ©1992-2010 by Pearson Education, Inc. All
+Rights Reserved.
+</footer>
+</body>
+</html>

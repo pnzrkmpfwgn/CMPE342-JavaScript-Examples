@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Grading App 2.0
+        //Initilazing the variables
+        var total = 0 ;
+        var GradeArr = window.prompt("Enter grades seperated by ','", "0");
+        var average = 0;
+        
+        //GradeArr becomes an array split() function will split the input string into an array, seperating varibles with ','
+        //Example: "1,2,3" will become ["1","2","3"]
+        //Notice that the each variable are still strings 
+        GradeArr = GradeArr.split(',');
+        //However we still won't use parseInt method because parseInt won't change all the variables inside the index at once.
+        
+        for(var i = 0 ; i < GradeArr.length;i++){
+             total += parseInt(GradeArr[i]); 
+            //We use parseInt to add and assign to total one by one as an integer 
+        }
+        average = total / GradeArr.length; // We can still use the length of the arr we created
+
+        document.writeln("<h1> The average is " + average + "</h1>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
