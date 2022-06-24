@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random number MinMax</title>
+    <script>    
+    function randomNumbers(){
+                // var numbers = (1 + Math.random()*9);
+                var randomNumbers = [] 
+                for(var i = 0 ; i < 10; i++){
+                    randomNumbers.push(Math.round(1+Math.random()*9));
+            }
+        return randomNumbers;
+    }
+    function max(randomNumbers){
+        var max = 0 ;
+        for(var i = 0 ; i < 10 ; i++){
+            if(randomNumbers[i] > max){
+                max = randomNumbers[i];
+            }
+        }
+        return max;
+    }
+    function min(randomNumbers){
+        var min = randomNumbers[0] ;
+        for(var i = 0 ; i < 10 ; i++){
+            if(randomNumbers[i] < min){
+                min = randomNumbers[i];
+            }
+        }
+        return min;
+    }
+    var rndArr = randomNumbers();
+    document.writeln("<p>Random numbers :" + rndArr.toString() + " </p>");
+    document.writeln("<p>Max :" + max(rndArr).toString() + "</p>");
+    document.writeln("<p>Min:" + min(rndArr).toString() +  "</p>");
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
